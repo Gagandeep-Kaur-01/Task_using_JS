@@ -1,11 +1,15 @@
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="file.css">
+  <script src="file.js"> </script>
   <title>file
     </title>
 <body>
 <h2> Choose a file which you want to load !!</h2>
-  <input type="file" id="file" />
+  <input type="file" id="file" accept='image/*' responsive onchange='openFile(event)' />  <br>
 
+<img id='output'>
 
 
 
