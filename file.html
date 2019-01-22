@@ -7,7 +7,13 @@
     </title>
 <body>
 <h2> Choose a file which you want to load !!</h2>
-  <input type="file" id="file" accept='image/*' responsive onchange='openFile(event)' />  <br>
+<!--  User selects a file, from the system -->
+  <input type="file" id="file" accept='image/*' onchange='openFile(event)' />  <br>
+  <!-- Accessing selected file's on a change event -->
+  <!-- to use onchange event directly on file input
+  *accept* define the type of input file
+  (onchange) : In order to change the input value, then it will call openFile event! -->
+
   <img id='output'>   <br>
 
 
