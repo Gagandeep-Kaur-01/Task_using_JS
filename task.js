@@ -46,10 +46,10 @@ function IsNumeric(e) {
     return ret;
 }
 
-
-function Redirect() {
-              window.location.href="file.html";
-           }
+// 
+// function Redirect() {
+//               window.location.href="file.html";
+//            }
 // var name = new Ar();
 // name.push(8);
 // function IsChar(ev) {
