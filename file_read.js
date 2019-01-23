@@ -54,3 +54,21 @@ document.getElementById("openfile").addEventListener('change', function() {  // 
   }    // The result property will contain the file data as a text string
   fr.readAsText(this.files[0]);  //for csv files, read it as text
 });
+
+
+// 888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
+
+// one another way to read csv file via js
+
+var intf = document.getElementById("readfile");
+var outf = document.getElementById("readout");
+intf.addEventListener("change", function () {
+  if (this.files && this.files[0]) {
+    var readfile = this.files[0];
+    var readf = new FileReader();
+    readf.addEventListener('load', function (e) {
+      outf.textContent = e.target.result;
+    });
+    readf.readAsText(readfile);
+  }
+});
