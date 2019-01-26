@@ -1,0 +1,145 @@
+<html>
+  <head>
+    <title>Read File</title>
+  </head>
+
+  <body>
+    <h2> Values are: </h2>
+    <p id = "test"> </p>
+
+     <input type="file" id="myFile">
+    <br>
+    <textarea style="width:800px;height: 600px" id="output"></textarea>
+
+    <script>
+
+// var food = ["chapati", "rice", "curd", "pulses"];
+// var out = "";
+// var i;
+// // for(i=0; i < 6; i++) {
+//   for (i=0; i<food.length;i++){
+//     out += food[i] + "<br>";
+//   }
+// //   out += "the value is " +i + "<br>";
+// // }
+// document.getElementById("test").innerHTML = out;
+var j ;
+  var fildata = "";
+for(j=0; j<10; j++) {
+  // fildata += intf[j] + "<br>";
+var intf = document.getElementById("myFile");
+var outf = document.getElementById("output");
+intf.addEventListener("change", function () {
+
+
+    fildata += intf[j] + "<br>";
+
+  if (this.files && this.files[0]) {
+    var myFile = this.files[0];
+    var readf = new FileReader();
+    readf.addEventListener('load', function (e) {
+      outf.textContent = e.target.result;
+    });
+    readf.readAsText(myFile);
+  }
+
+
+});
+}
+//
+// var sep = document.getElementById("separate");
+// var fil = document.getElementById("filter");
+//
+// // var sepfile = sep.files;
+// var data = "";
+// var i;
+// for (i=0; i<10; i++) {
+//   data += sep[i];
+// }
+//  data.addEventListener("change", function () {
+//     if (this.files && this.files[0]) {
+//            var separate = this.files[0];
+//
+//   var readr = new FileReader();
+//      readr.addEventListener('load', function (e) {
+//             fil.textContent = e.target.result; //concatenate the output on each iteration.
+//
+//  });
+//      readr.readAsText(separate);
+//
+//    }
+//  });
+//
+
+
+
+    // document.getElementById("myFile").addEventListener('change', function() {  //  to add the change event listener
+    //   var fr = new FileReader();
+    //   var data;
+    //   for (var i=0; i<10; i++) {
+    //     data = myFile[i];
+    //
+    //   }
+    //
+    //   fr.onload = function(){   // onload called after read operation
+    //     //after loading the file, it will gives the results !
+    //
+    //     document.getElementById("output").textContent = this.result;
+    //     // The result will be stored in (this.result) after the 'load' event fires.
+    //   }    // The result property will contain the file data as a text string
+    //   fr.readAsText(this.files[0]);  //for csv files, read it as text
+    // });
+
+
+
+     //var input = document.getElementById("myFile");
+      //var output = document.getElementById("output");
+    //  var row = 100; //2KB as you mentioned
+    //  var chunker = new RegExp('[^]{1,' + row + '}', 'g');
+    //  var chunked_results;
+    //
+    //  input.addEventListener("change", function () {
+    //    if (this.files && this.files[0]) {
+    //      var myFile = this.files[0];
+    //      var reader = new FileReader();
+    //      reader.addEventListener('load', function (e) {
+    //        chunked_results = e.target.result.match(chunker);
+    //        output.textContent = chunked_results[0];
+    //      });
+    //      reader.readAsBinaryString(myFile);
+    //    }
+    //  });
+   // var filters = {
+   //      'line': 'Commercial',
+   //      'construction': 'Reinforced Masonry'
+   //  };
+   //
+   //  d3.csv("data.csv", function(csv) {
+   //      csv = csv.filter(function(row) {
+   //          // run through all the filters, returning a boolean
+   //          return ['policyID','statecode','line','construction'].reduce(function(pass, column) {
+   //              return pass && (
+   //                  // pass if no filter is set
+   //                  !filters[column] ||
+   //                      // pass if the row's value is equal to the filter
+   //                      // (i.e. the filter is set to a string)
+   //                      row[column] === filters[column] ||
+   //                      // pass if the row's value is in an array of filter values
+   //                      filters[column].indexOf(row[column]) >= 0
+   //                  );
+   //          }, true);
+   //      })
+   //      console.log(csv.length, csv);
+   //  });
+   //
+   //
+   //  d3.csv("data.csv", function(data) {
+   //      for (var i = 0; i < data.length; i++) {
+   //          console.log(data[i].line);
+   //          console.log(data[i].construction);
+   //      }
+   //  });
+    </script>
+
+  </body>
+</html>
