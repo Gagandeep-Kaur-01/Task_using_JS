@@ -1,11 +1,11 @@
 // Check for the various File API support.
-if (window.File && window.FileReader && window.FileList && window.Blob) {
+/*if (window.File && window.FileReader && window.FileList && window.Blob) {
 alert ('Great success!! All the File APIs are supported.');
 
 }
 else {
   alert('The File APIs are not fully supported in this browser.');
-}
+}  */
 
 //**********************************************************************************************************************88
 /* Explanation:
@@ -72,3 +72,54 @@ intf.addEventListener("change", function () {
     readf.readAsText(readfile);
   }
 });
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+// var sep = document.getElementById("separate");
+// var fil = document.getElementById("filter");
+//
+// // var sepfile = sep.files;
+// var data = "";
+//
+// for (var i=0; i<10; i++) {
+//   data += sep[i] + <br>;
+// }
+// document.getElementById("separate").innerHTML = data;
+
+ // data.addEventListener("change", function () {
+ //    if (this.files && this.files[0]) {
+ //           var separate = this.files[0];
+ //
+ //  var readr = new FileReader();
+ //     readr.addEventListener('load', function (e) {
+ //            fil.textContent = e.target.result; //concatenate the output on each iteration.
+ // });
+ //     readr.readAsText(separate);
+ //   }
+ // });
+
+
+
+// var filters = {
+//     'line': 'Commercial',
+//     'construction': 'Reinforced Masonry'
+// };
+//
+// d3.csv("data.csv", function(csv) {
+//     csv = csv.filter(function(row) {
+//         // run through all the filters, returning a boolean
+//         return ['policyID','statecode','line','construction'].reduce(function(pass, column) {
+//             return pass && (
+//                 // pass if no filter is set
+//                 !filters[column] ||
+//                     // pass if the row's value is equal to the filter
+//                     // (i.e. the filter is set to a string)
+//                     row[column] === filters[column] ||
+//                     // pass if the row's value is in an array of filter values
+//                     filters[column].indexOf(row[column]) >= 0
+//                 );
+//         }, true);
+//     })
+//     console.log(csv.length, csv);
+// });
