@@ -1,0 +1,54 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="file_read.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+  <title>file
+    </title>
+<body>
+<h2> Choose a file which you want to load !!</h2>
+<!--  User selects a file, from the system -->
+<h4> Choose an image which you want to display : </h4>
+  <input type="file" id="file" accept='image/*' onchange='openFile(event)' />  <br>
+  <!-- Accessing selected file's on a change event -->
+  <!-- to use onchange event directly on file input
+  *accept* define the type of input file
+  (onchange) : In order to change the input value, then it will call openFile event! -->
+
+  <img id='output'>   <br>
+
+
+
+<h3> Choose any text or csv file : </h3>
+<input type="file" id="openfile" />  <br>  <br>
+<textarea id="Filecontents"></textarea>  <br>  <br>
+
+<div class="row">
+  <div class="col-sm-6">
+<input type="file" id="readfile"/>  <br>  <br>
+<textarea style="width:900px;height: 800px"  id="readout"></textarea>  <br>
+</div>
+
+
+
+<!--
+to filter data -->
+  <div class="col-sm-6">
+    <h3>Filtered Data</h3> <br>
+<input type = "file" id = "separate"/> <br>  <br>
+<textarea style="width:900px; height: 800px"  id= "filter"></textarea >
+</div>
+</div>
+
+  <script type="text/javascript" src="file_read.js"> </script>
+
+  </body>
+
+</html>
